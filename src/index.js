@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { HoroscopeContext } from './Context/HoroscopeContext';
 
 const Root = () => {
   return (
-      <App />
+      <HoroscopeContext.Provider value={{ sign: "Virgo" }}>
+        <App />
+      </HoroscopeContext.Provider>
   );
 };
 
